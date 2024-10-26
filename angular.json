@@ -13,10 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/ev-dashboard",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/mapupProjectFrontend/",
             "polyfills": [
               "zone.js"
             ],
