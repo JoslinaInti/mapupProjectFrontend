@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+/* Container for all charts */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  
+  
+  /* Chart title styling */
+  .chart-contain er h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Individual chart wrapper */
+  .chart-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 2rem; /* Space between chart and legend */
+    flex-direction: column; /* Default to column layout for narrow screens */
+  }
+  
+  /* Chart subheading */
+  .chart-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Pie Chart and Bar Chart */
+  ngx-charts-pie-chart,
+  ngx-charts-bar-vertical {
+    display: block;
+    width: 70%;
+    height: auto;
+    max-height: 500px;
+  }
+  .linkColor{
+    color: rgb(10, 170, 214);
+    cursor: pointer;
+  }
+  /* Responsive adjustment for larger screens to show legend beside chart */
+  @media (min-width: 768px) {
+    .chart-section {
+      flex-direction: row; /* Row layout for larger screens */
+      justify-content: space-between;
+    }
+  
+    ngx-charts-pie-chart,
+    ngx-charts-bar-vertical {
+      width: 60%;
+    }
+  }
+  
+  /* Styling for legend to align beside the chart */
+  ngx-charts-legend {
+    width: 30%; /* Control legend width */
+    max-width: 200px;
+  }
+  
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e8f5e9; /* Light green background */
+  margin: 0;
+  color: #333;
+}
+h1{
+  color: #e51e6a;
+}
+h2, h3 {
+  color: #2e7d32; /* Dark green for headings */
+}
+/* Container for the dashboard */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Description text */
+p {
+  /* font-size: 1.1rem; */
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0.5rem 0 1.5rem;
+}
+.linkColor {
+  color: #1e88e5;
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  font-size: 0.9rem;
+}
